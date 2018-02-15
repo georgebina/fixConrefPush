@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<?xml-model href="fixConrefPush.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<topic id="topic_tdc_tw3_wcb">
+    <title>Pushing topic</title>
+    <body>
+    	<p>The following code incorrectly encodes a content reference push by adding the 
+    	<codeph>conref</codeph> attribute on a single element that is marked to push content
+    	before a reference and there is no element marked as a reference.</p>
+    	<p>So, our example contains:</p>
+<codeblock>
+&lt;li conref=&quot;example.dita#example/b&quot; conaction=&quot;pushbefore&quot;&gt;THIS GOES BEFORE B&lt;/li&gt;
+</codeblock>
+    	<p>The correct way of making the content reference push is</p>
+<codeblock>
+&lt;li conaction=&quot;pushbefore&quot;&gt;THIS GOES BEFORE B&lt;/li&gt;
+&lt;li conaction=&quot;mark&quot; conref=&quot;example.dita#example/b&quot;/&gt;
+</codeblock>
+    	<p>Here you can see how an automatic fix can detect this situation and offer to make 
+    	the necessary changes automatically.</p>
+
+		<note>You can try it out below:</note>
+    	<ol>
+    		<li conref="example.dita#example/b" conaction="pushbefore">THIS GOES BEFORE B</li>
+    	</ol>
+		<p>Similarly for pushing after and element.</p>
+		<p>So, our example contains:</p>
+		<codeblock>
+&lt;li conref=&quot;example.dita#example/b&quot; conaction=&quot;pushbefore&quot;&gt;THIS GOES AFTER B&lt;/li&gt;
+</codeblock>
+		<p>The correct way of making the content reference push is</p>
+		<codeblock>
+&lt;li conaction=&quot;mark&quot; conref=&quot;example.dita#example/b&quot;/&gt;
+&lt;li conaction=&quot;pushbefore&quot;&gt;THIS GOES AFTER B&lt;/li&gt;
+</codeblock>
+		<p>Here you can see how an automatic fix can detect this situation and offer to make the
+			necessary changes automatically.</p>
+		<ol id="ol_rn5_5gk_wcb">
+			<li conref="example.dita#example/b" conaction="pushafter">THIS GOES AFTER B</li>
+		</ol>    	
+		    	
+    	
+    </body>
+</topic>

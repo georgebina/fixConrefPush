@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="example">
+    <title>Example</title>
+    <body>
+        <p></p>
+		<p>
+			<ol id="ol_url_dx3_wcb">
+				<li>Original 1</li>
+				<li id="b">Reference B - Original 2</li>
+				<li>Original 3</li>
+			</ol>
+		</p>
+    </body>
+</topic>
