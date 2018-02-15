@@ -11,7 +11,7 @@ contain the conref target and the desired push action, before or after, somethin
 
 ```xml
 
-<li conaction="pushafter" conref="example.dita#example/b">THIS GOES AFTER B</li>
+<li conref="example.dita#example/b" conaction="pushbefore">THIS GOES BEFORE B</li>
 
 ```
 
