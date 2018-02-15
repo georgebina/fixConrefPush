@@ -26,12 +26,12 @@
 		<p>Similarly for pushing after and element.</p>
 		<p>So, our example contains:</p>
 		<codeblock>
-&lt;li conref=&quot;example.dita#example/b&quot; conaction=&quot;pushbefore&quot;&gt;THIS GOES AFTER B&lt;/li&gt;
+&lt;li conref=&quot;example.dita#example/b&quot; conaction=&quot;pushafter&quot;&gt;THIS GOES AFTER B&lt;/li&gt;
 </codeblock>
 		<p>The correct way of making the content reference push is</p>
 		<codeblock>
 &lt;li conaction=&quot;mark&quot; conref=&quot;example.dita#example/b&quot;/&gt;
-&lt;li conaction=&quot;pushbefore&quot;&gt;THIS GOES AFTER B&lt;/li&gt;
+&lt;li conaction=&quot;pushafter&quot;&gt;THIS GOES AFTER B&lt;/li&gt;
 </codeblock>
 		<p>Here you can see how an automatic fix can detect this situation and offer to make the
 			necessary changes automatically.</p>
