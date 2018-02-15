@@ -13,8 +13,7 @@
 				identified by <sch:value-of select="@conref"/> without 
 				marking the target in a separate element, as required by 
 				the DITA specification. You need to mark the location 
-				in a separate element, inserted immediately after this 
-				element.
+				in a separate element.
 			</sch:report>
 			<sqf:fix id="insertMarkAfter">
 				<sqf:description>
@@ -40,8 +39,7 @@
 				identified by <sch:value-of select="@conref"/> without 
 				marking the target in a separate element, as required by 
 				the DITA specification. You need to mark the location 
-				in a separate element, inserted immediately before this 
-				element.
+				in a separate element.
 			</sch:report>
 			<sqf:fix id="insertMarkBefore">
 				<sqf:description>
